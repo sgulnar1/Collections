@@ -1,14 +1,16 @@
 import java.util.*;
 
-public class CollectionClass {
+public class ArrayListClass {
     public static void main(String[] args) {
         String[] strings = new String[5];
         System.out.println(Arrays.toString(strings));
         int[] ints = new int[5];
-        List<String> list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>(5);
         list.add("A");
-        list.add("B");
         list.add("C");
+        list.add("B"); //[)
+        // 7 8 8 4 5
+        list.trimToSize();
         List<String> list1 = new ArrayList<>();
         list1.add("D");
         list1.add("E");
