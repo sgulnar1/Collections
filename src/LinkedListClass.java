@@ -2,8 +2,8 @@ import java.util.*;
 
 public class LinkedListClass {
     public static void main(String[] args) {
-
         LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list1 = new ArrayList<>();
         list.add(null);
         list.add("Islam");
         list.offerLast("Fidan");
