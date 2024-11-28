@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class User /*implements Comparable */ {
+public class User implements Comparable   {
     private Integer id;
     private String name;
 
@@ -33,7 +33,7 @@ public class User /*implements Comparable */ {
                 '}';
     }
 
-    @Override
+    //@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -46,13 +46,14 @@ public class User /*implements Comparable */ {
 //        return Objects.hash(id, name);
 //    }
 
-//@Override
-//    public int compareTo(Object o) {
-//        User user = (User) o;
-//        if(id>user.getId())
-//            return 1;
-//        else if(id<user.getId())
-//            return -1;
-//        else return 0;
-//    }
+    //@Override
+    public int compareTo(Object o) {
+        System.out.println("compareTo");
+        User user = (User) o;
+        if (id > user.getId())
+            return 1;
+        else if (id < user.getId())
+            return -1;
+        else return 0;
+    }
 }
