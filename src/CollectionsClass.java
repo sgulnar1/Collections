@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class CollectionsClass {
     public static void main(String[] args) {
@@ -39,7 +36,36 @@ public class CollectionsClass {
         System.out.println(Collections.frequency(list1, 5));
         System.out.println(Collections.indexOfSubList(list1, list2));
         System.out.println(Collections.lastIndexOfSubList(list1, list2));
-        Collections.list()
+        System.out.println(list1);
+        System.out.println(Collections.max(list1));
+        System.out.println(Collections.min(list1));
+        List<String> name = Collections.nCopies(3, "name");
+        System.out.println(name);
+        SequencedMap<String, Boolean> map = new LinkedHashMap<>();
+        SequencedSet<String> es = Collections.newSequencedSetFromMap(map);
+        System.out.println(es);
+        System.out.println(Collections.binarySearch(list1, 3));
+        Collections.replaceAll(list1, 9, 4);
+        System.out.println(list1);
+        Collections.reverse(list1);
+        System.out.println(list1);
+        Comparator<Object> reverseComp = Collections.reverseOrder();
+        Collections.sort(list1, reverseComp);
+        System.out.println(list1);
+        Collections.rotate(list1, -3);
+        System.out.println(list1);
+//        Collections.shuffle(list1);
+       System.out.println(list1);
+        Set<String> set = Collections.singleton("key1");
+       // set.add("key2");
+        System.out.println(set);
+        Collections.swap(list1, 1, 4);
+        System.out.println(list1);
+        Collections.synchronizedCollection(list1);
+        list1.add(100);
+        List<Integer> list = Collections.unmodifiableList(list1);
+        System.out.println("l: " + list);
+        list.add(100);
+        System.out.println(list);
     }
-
 }
